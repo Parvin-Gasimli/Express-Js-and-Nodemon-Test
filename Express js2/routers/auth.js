@@ -1,11 +1,7 @@
 const express=require("express")
 const router=express.Router()
-router.get("/",(req,res)=>{
-    res.send("Aouth Home pagfe")
-})
+const{register} =require("../controllers/auth")
 
-router.get("/register",(req,res)=>{
-    res.send("Register PAGE saaaMMEKM")
-})
+router.post("/register",register)
 
 module.exports=router

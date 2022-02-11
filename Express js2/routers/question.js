@@ -1,13 +1,10 @@
 const express=require("express")
+const {GetAllQuestions}=require("../controllers/questions")
 
 
 const router=express.Router()
-router.get("/",(req,res)=>{
-    res.send("Questions saaam ")
-})
+router.get("/",GetAllQuestions)
 
-router.get("/delete",(req,res)=>{
-    res.send("QUESTIONS PAGE saaaMMEKM delete")
-})
+
 
 module.exports=router
